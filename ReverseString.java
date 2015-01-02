@@ -20,8 +20,9 @@ public class ReverseString {
 			ident.put("token", challenge.BeginChallenge.token());
 			String identifier = ident.toString();
  			
- 			String reverseString = challenge.BeginChallenge.post("http://challenge.code2040.org/api/getstring", identifier);
-
+ 			JSONObject retobj = challenge.BeginChallenge.post("http://challenge.code2040.org/api/getstring", identifier);
+			
+			String reverseString = retobj.getString("result");
  			reverseString = new StringBuilder(reverseString).reverse().toString();
 
  			JSONObject message = new JSONObject();
@@ -29,8 +30,9 @@ public class ReverseString {
  			message.put("string", reverseString);
  			String mssg = message.toString();
 
- 			String result = challenge.BeginChallenge.post("http://challenge.code2040.org/api/validatestring", mssg);
-			System.out.println(result);
+ 			JSONObject res = challenge.BeginChallenge.post("http://challenge.code2040.org/api/validatestring", mssg);
+			//String result = res.getString("result");
+			//System.out.println(result);
 
 		} catch (Exception e) {
 			e.printStackTrace();

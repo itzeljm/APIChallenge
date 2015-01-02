@@ -26,7 +26,7 @@ public class BeginChallenge {
 			String SENDING = dictionary.toString();
 			String REQUEST = "http://challenge.code2040.org/api/register";
 
-			String token = post(REQUEST, SENDING);
+			String token = post(REQUEST, SENDING).getString("result");
 
 
 		} catch (Exception e) {
@@ -48,7 +48,7 @@ public class BeginChallenge {
 	/** Method that posts the given URLPARAMETERS to the desired LOCATION which is a url, and returns 
 	* a string message.
 	*/
-	public static String post(String location, String urlParameters) throws Exception {
+	public static JSONObject post(String location, String urlParameters) throws Exception {
 		
 		HttpURLConnection connection = null;
 		System.out.println("Posting " + urlParameters + " to : " + location);
@@ -69,14 +69,14 @@ public class BeginChallenge {
 			JSONObject retmssg = new JSONObject(in.readLine());
 			in.close();
 			
-			String received = retmssg.getString("result");
-
+			String received = retmssg.toString();
 
 			System.out.println("Sending 'POST' request to URL : " + location);
 			System.out.println("Post Parameters :  " + urlParameters);				
 			System.out.println("Received : " + received);	
+			System.out.println(" ");
 
-			return received;
+			return retmssg;
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -101,7 +101,7 @@ public class BeginChallenge {
 			JSONObject checkstatus = new JSONObject();
 			checkstatus.put("token : ", token());
 			String tosend = checkstatus.toString();
-			String grades = post("http://challenge.code2040.org/api/status", tosend);
+			String grades = post("http://challenge.code2040.org/api/status", tosend).getString("result");
 			System.out.println(grades);
 
 		} catch (Exception e) {
