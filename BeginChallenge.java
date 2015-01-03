@@ -45,6 +45,19 @@ public class BeginChallenge {
 		}
 	}
 
+	/** Method that returns the string contents of a JSON Object that contains my token. */
+	public static String identifier() throws Exception {
+		try {
+			JSONObject identifier = new JSONObject(); 
+			identifier.put("token", token());
+			String content = identifier.toString();
+			return content;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
 	/** Method that posts the given URLPARAMETERS to the desired LOCATION which is a url, and returns 
 	* a string message.
 	*/
@@ -68,7 +81,6 @@ public class BeginChallenge {
 			BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 			JSONObject retmssg = new JSONObject(in.readLine());
 			in.close();
-			
 			String received = retmssg.toString();
 
 			System.out.println("Received : " + received);	
@@ -90,9 +102,7 @@ public class BeginChallenge {
 	/** Method that checks grades on the API Challenge, it doesn't take any parameters. */
 	public static void checkStatus() {
 		try {
-			JSONObject checkstatus = new JSONObject();
-			checkstatus.put("token", token());
-			String tosend = checkstatus.toString();
+			String tosend = identifier();
 			JSONObject grades = post("http://challenge.code2040.org/api/status", tosend);
 
 		} catch (Exception e) {

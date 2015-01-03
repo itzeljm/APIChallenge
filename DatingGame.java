@@ -22,11 +22,9 @@ public class DatingGame {
 	public static void main(String[] args) throws Exception {
 		
 		try {
+			String id = challenge.BeginChallenge.identifier();
 
-			JSONObject ident = new JSONObject();
-			ident.put("token", challenge.BeginChallenge.token());
-			JSONObject retobj = challenge.BeginChallenge.post("http://challenge.code2040.org/api/time ", ident.toString());
-
+			JSONObject retobj = challenge.BeginChallenge.post("http://challenge.code2040.org/api/time ", id);
 			JSONObject pot = retobj.getJSONObject("result");
 
 			DateTime data = DateTime.parse(pot.getString("datestamp"));

@@ -9,7 +9,8 @@ API OUTPUT
 
 BeginChallenge.java Output :
 
-Posting {"email":"j_itzel_m@berkeley.edu","github":"https://github.com/itzeljm/APIChallenge.git"} to : http://challenge.code2040.org/api/register
+Posting {"email":"j_itzel_m@berkeley.edu","github":"https://github.com/itzeljm/APIChallenge.git"} 
+to : http://challenge.code2040.org/api/register
 Received : {"result":"dtqLuA8IIc"}
 
 

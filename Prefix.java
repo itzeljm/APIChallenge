@@ -20,14 +20,13 @@ public class Prefix {
 	public static void main(String[] args) throws Exception {
 
 		try {
-			JSONArray returnArray = new JSONArray();
 			
-			JSONObject ident = new JSONObject();
-			ident.put("token", challenge.BeginChallenge.token()); //repetitive code make a final one
+			String id = challenge.BeginChallenge.identifier();
 
-			JSONObject results = challenge.BeginChallenge.post(" http://challenge.code2040.org/api/prefix", ident.toString());
+			JSONObject results = challenge.BeginChallenge.post(" http://challenge.code2040.org/api/prefix", id);
 			JSONObject strings = results.getJSONObject("result");
 
+			JSONArray returnArray = new JSONArray();
 			JSONArray stringArray = strings.getJSONArray("array");
 			String pref = strings.getString("prefix");
 
@@ -43,7 +42,7 @@ public class Prefix {
 			tosend.put("token", challenge.BeginChallenge.token()); // redundant code
 			tosend.put("array" , returnArray);
 			
-			JSONObject b = challenge.BeginChallenge.post(" http://challenge.code2040.org/api/validateprefix", tosend.toString());
+			JSONObject result = challenge.BeginChallenge.post(" http://challenge.code2040.org/api/validateprefix", tosend.toString());
 			
 		} catch (Exception e) {
 			e.printStackTrace();

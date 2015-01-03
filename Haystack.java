@@ -20,13 +20,11 @@ public class Haystack {
 	public static void main(String[] args) throws Exception {
 		try {		
 			String URL = "http://challenge.code2040.org/api/haystack";
+			String id = challenge.BeginChallenge.identifier();
 
-			JSONObject ident = new JSONObject();
-			ident.put("token", challenge.BeginChallenge.token());
-
-			JSONObject obtained = challenge.BeginChallenge.post(URL, ident.toString());
-
+			JSONObject obtained = challenge.BeginChallenge.post(URL, id);
 			JSONObject barn = obtained.getJSONObject("result");
+			
 			JSONArray haystack = barn.getJSONArray("haystack");
 			String needle = barn.getString("needle");
 
@@ -43,7 +41,7 @@ public class Haystack {
 			tosend.put("token", challenge.BeginChallenge.token());
 			tosend.put("needle", jackpot);
 
-			JSONObject retval  = challenge.BeginChallenge.post("http://challenge.code2040.org/api/validateneedle", tosend.toString());			
+			JSONObject result  = challenge.BeginChallenge.post("http://challenge.code2040.org/api/validateneedle", tosend.toString());			
 
 		} catch (Exception e) {
 			e.printStackTrace();
