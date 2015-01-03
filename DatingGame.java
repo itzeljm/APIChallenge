@@ -38,6 +38,7 @@ public class DatingGame {
 
 			JSONObject res = challenge.BeginChallenge.post("http://challenge.code2040.org/api/validatetime", tosend.toString());
 		
+			challenge.BeginChallenge.checkStatus();
 
 		} catch (Exception e) {
 			e.printStackTrace();

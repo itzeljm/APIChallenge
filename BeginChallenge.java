@@ -71,8 +71,6 @@ public class BeginChallenge {
 			
 			String received = retmssg.toString();
 
-			System.out.println("Sending 'POST' request to URL : " + location);
-			System.out.println("Post Parameters :  " + urlParameters);				
 			System.out.println("Received : " + received);	
 			System.out.println(" ");
 
@@ -88,21 +86,14 @@ public class BeginChallenge {
 		}
 	}
 
-	//Still deciding whether this implementation is important
-	/** Method that returns a string message after posting to the OBJECT to the LOCATION. */
-	public static String get(String location, String object) {
-			return null;
-	}
-
 
 	/** Method that checks grades on the API Challenge, it doesn't take any parameters. */
 	public static void checkStatus() {
 		try {
 			JSONObject checkstatus = new JSONObject();
-			checkstatus.put("token : ", token());
+			checkstatus.put("token", token());
 			String tosend = checkstatus.toString();
-			String grades = post("http://challenge.code2040.org/api/status", tosend).getString("result");
-			System.out.println(grades);
+			JSONObject grades = post("http://challenge.code2040.org/api/status", tosend);
 
 		} catch (Exception e) {
 			e.printStackTrace();
