@@ -3,9 +3,11 @@ CHALLENGE REFLECTION
 Author : Itzel Martinez
 ========================
 
-As I began this challenge I was a little afraid that I was not going to be able to complete it due to my lack of experience.
+As I began this challenge I was a little afraid that I was not going to be able 
+to complete it due to my lack of experience.
 Compare to most, I am fairly new to the world of computer science. 
-It was not until my freshman year of college that I learned about Computer Science and it was that same year that my passion for this field developed. 
+It was not until my freshman year of college that I learned about Computer Science 
+and it was that same year that my passion for this field developed. 
 
 This challenge has taught me a lot, not only about connecting and retrieving information 
 from an API's but also about myself and the way I think. I had never worked with an API
@@ -29,3 +31,5 @@ understand why the material we learn in my Computer Science classes are so impor
 This challenge has helped me grow a lot as a Computer Scientist and has motivated me to
 continue working on projects of my own, which I am super excited to start. This is a small
 summary of my code2040 API Challenge experience. 
+
+
