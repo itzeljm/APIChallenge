@@ -1,0 +1,69 @@
+API OUTPUT 
+
+/** File that shows the messages received from the API for the registration and the 
+* different challenges.
+* @author Itzel Martinez 
+*/
+
+=======================================================
+
+BeginChallenge.java Output :
+
+Posting {"email":"j_itzel_m@berkeley.edu","github":"https://github.com/itzeljm/APIChallenge.git"} to : http://challenge.code2040.org/api/register
+Received : {"result":"dtqLuA8IIc"}
+
+
+=======================================================
+
+
+ReverseString.java Output :
+
+Posting {"token":"dtqLuA8IIc"} to : http://challenge.code2040.org/api/getstring
+Received : {"result":"aYygN"}
+ 
+Posting {"token":"dtqLuA8IIc","string":"NgyYa"} to : http://challenge.code2040.org/api/validatestring
+Received : {"result":"PASS: stage1. Enrollment record updated!"}
+
+
+=======================================================
+
+
+Haystack.java Output :
+
+Posting {"token":"dtqLuA8IIc"} to : http://challenge.code2040.org/api/haystack
+Received : {"result":{"needle":"uc6Z8","haystack":["ssvPs","YQZsY","EwUnB","4QL87","IMiO4","iSzFq","pvQ8n","q0uHK","7A1PZ","Ncoi4","zIu1i","x7EIM","7O6y7","HVPzU","sFcQj","glHmr","2WAka","8qwDR","9S5Wl","uc6Z8"]}}
+ 
+Posting {"token":"dtqLuA8IIc","needle":19} to : http://challenge.code2040.org/api/validateneedle
+Received : {"result":"PASS: stage2. Enrollment record updated!"}
+ 
+
+=======================================================
+
+
+Prefix.java Output :
+
+Posting {"token":"dtqLuA8IIc"} to :  http://challenge.code2040.org/api/prefix
+Received : {"result":{"prefix":"379","array":["379RuYPz","379aBmb9","3793bZkB","1385vzdQ","680qyqoC","379R6R4s"]}}
+ 
+Posting {"token":"dtqLuA8IIc","array":["1385vzdQ","680qyqoC"]} to :  http://challenge.code2040.org/api/validateprefix
+Received : {"result":"PASS: stage3. Enrollment record updated!"}
+
+
+=======================================================
+
+
+DatingGame.java Output :
+
+Posting {"token":"dtqLuA8IIc"} to : http://challenge.code2040.org/api/time 
+Received : {"result":{"interval":280912607,"datestamp":"2023-12-19T02:05:00.000Z"}}
+ 
+Posting {"token":"dtqLuA8IIc","datestamp":"2032-11-12T09:21:47.000Z"} to : http://challenge.code2040.org/api/validatetime
+Received : {"result":"PASS: stage4. Enrollment record updated!"}
+ 
+Posting {"token":"dtqLuA8IIc"} to : http://challenge.code2040.org/api/status
+Received : {"result":{"Stage 2 passed":true,"Stage 4 passed":true,"Stage 1 passed":true,"Stage 3 passed":true}}
+
+
+=======================================================
+
+

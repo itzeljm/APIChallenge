@@ -10,7 +10,8 @@ import org.joda.time.*;
 * Example { Datestamp : 2000-11-19T05:10:00.000Z }.
 * The value for interval is a number of seconds.
 * This class adds the interval to the date, then return the resulting date to the API. 
-*
+* It also checks the grades for the API Challenge. 
+* 
 * @author Itzel Martinez
 */
 
