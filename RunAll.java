@@ -25,7 +25,7 @@ public class RunAll {
 		System.out.println("Running the fourth and last stage of the Challenge : DatingGame.");		
 		System.out.println("================================================================");
 		challenge.DatingGame.main(args);
-		
+
 		}
 }
 
