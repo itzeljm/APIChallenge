@@ -25,26 +25,27 @@ Compile the last stage of the challenge and the RunAll file by using the followi
 Note: Can also compile all the files by using the statement for the last stage.
 
 
-Step 2 : Running Individual Files
+Step 2 : Running Files
 ======
 
-Run stage I - III individually by using the following statement on the command line:
+OPTION 1 : Running Individual Files
 
-	java -cp .:java-json.jar challenge.<FileName>
+	Run stage I - III individually by using the following statement on the command line:
 
-Run the last stage by using the following statement:
+		java -cp .:java-json.jar challenge.<FileName>
+
+	Run the last stage by using the following statement:
+	 
+	 	 java -cp .:java-json.jar:joda-time-2.5.jar challenge.<FileName>
+
+	Note: Can run all stages using the statement for the last stage.
+
  
- 	 java -cp .:java-json.jar:joda-time-2.5.jar challenge.<FileName>
+OPTION 2: Running All Files
 
-Note: Can run all stages using the statement for the last stage.
+	Run all the files by using the following statement:
 
- 
-Step 3 : Running All Files
-========
-
-Run all the files by using the following statement:
-
-	java -cp .:java-json.jar:joda-time-2.5.jar challenge.RunAll
+		java -cp .:java-json.jar:joda-time-2.5.jar challenge.RunAll
 
 
 
