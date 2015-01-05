@@ -47,7 +47,7 @@ public class Prefix {
 			tosend.put("array" , returnArray);
 			
 			System.out.println("Resulting Array :" + returnArray.toString() + "\n");
-			System.out.println("Posting Stage Results to Server : ");
+			System.out.println("Posting Challenge Results to Server : ");
 			JSONObject result = challenge.BeginChallenge.post(" http://challenge.code2040.org/api/validateprefix", tosend.toString());
 			
 		} catch (Exception e) {

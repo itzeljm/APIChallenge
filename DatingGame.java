@@ -45,7 +45,7 @@ public class DatingGame {
 			tosend.put("datestamp", data.toString());
 
 			System.out.println("Resulting Date: " + data.toString() + "\n");
-			System.out.println("Posting Stage Results to Server : ");
+			System.out.println("Posting Challenge Results to Server : ");
 			JSONObject res = challenge.BeginChallenge.post("http://challenge.code2040.org/api/validatetime", tosend.toString());
 		
 			challenge.BeginChallenge.checkStatus();

@@ -1,73 +1,102 @@
 API OUTPUT 
 
-/** File that shows the messages received from the API for the registration and the 
-* different stages of the challenge.
+/** File that shows the output of running the RunAll.java file, which
+* runs all the java files for the API Challenge.
+*
 * @author Itzel Martinez 
 */
 
-=======================================================
+Connecting to the Registration Endpoint.
+======================================== 
 
-BeginChallenge.java Output :
+Retrieving Registration Data from Server : 
 
-Posting {"email":"j_itzel_m@berkeley.edu","github":"https://github.com/itzeljm/APIChallenge.git"} 
+POST : {"email":"j_itzel_m@berkeley.edu","github":"https://github.com/itzeljm/APIChallenge.git"}
 to : http://challenge.code2040.org/api/register
-Received : {"result":"dtqLuA8IIc"}
+Response : {"result":"dtqLuA8IIc"}
 
+Token Received :dtqLuA8IIc
 
-=======================================================
+Running the First Stage of the Challenge : ReverseString.
+========================================================= 
 
+Retrieving Challenge Data from Server : 
 
-ReverseString.java Output :
+POST : {"token":"dtqLuA8IIc"}
+to : http://challenge.code2040.org/api/getstring
+Response : {"result":"bw9SC"}
 
-Posting {"token":"dtqLuA8IIc"} to : http://challenge.code2040.org/api/getstring
-Received : {"result":"aYygN"}
- 
-Posting {"token":"dtqLuA8IIc","string":"NgyYa"} to : http://challenge.code2040.org/api/validatestring
-Received : {"result":"PASS: stage1. Enrollment record updated!"}
+String Received : bw9SC
+String Reversed : CS9wb
 
+Posting Challenge Results to Server : 
 
-=======================================================
+POST : {"token":"dtqLuA8IIc","string":"CS9wb"}
+to : http://challenge.code2040.org/api/validatestring
+Response : {"result":"PASS: stage1. Enrollment record updated!"}
 
+Running the Second Stage of the Challenge : Haystack.
+===================================================== 
 
-Haystack.java Output :
+Retrieving Challenge Data from Server : 
 
-Posting {"token":"dtqLuA8IIc"} to : http://challenge.code2040.org/api/haystack
-Received : {"result":{"needle":"uc6Z8","haystack":["ssvPs","YQZsY","EwUnB","4QL87","IMiO4",
-"iSzFq","pvQ8n","q0uHK","7A1PZ","Ncoi4","zIu1i","x7EIM","7O6y7","HVPzU","sFcQj","glHmr",
-"2WAka","8qwDR","9S5Wl","uc6Z8"]}}
- 
-Posting {"token":"dtqLuA8IIc","needle":19} to : http://challenge.code2040.org/api/validateneedle
-Received : {"result":"PASS: stage2. Enrollment record updated!"}
- 
+POST : {"token":"dtqLuA8IIc"}
+to : http://challenge.code2040.org/api/haystack
+Response : {"result":{"needle":"c1bop","haystack":["uJfEC","2jdic","b00Op","ESMGH","C9ds6","ZDUOW","UCeah","Vlqob","2VZ31","8WVsL","c1bop","V2dFs","6VkCy","udML0","p8gQE","7jNxf","1ZuFs","TZaEA","FmbLC","zpgRS"]}}
 
-=======================================================
+Haystack Received : ["uJfEC","2jdic","b00Op","ESMGH","C9ds6","ZDUOW","UCeah","Vlqob","2VZ31","8WVsL","c1bop","V2dFs","6VkCy","udML0","p8gQE","7jNxf","1ZuFs","TZaEA","FmbLC","zpgRS"]
+Needle Received : c1bop
 
+Index of Needle : 10
 
-Prefix.java Output :
+Posting Challenge Results to Server : 
 
-Posting {"token":"dtqLuA8IIc"} to :  http://challenge.code2040.org/api/prefix
-Received : {"result":{"prefix":"379","array":["379RuYPz","379aBmb9","3793bZkB","1385vzdQ","680qyqoC","379R6R4s"]}}
- 
-Posting {"token":"dtqLuA8IIc","array":["1385vzdQ","680qyqoC"]} to :  http://challenge.code2040.org/api/validateprefix
-Received : {"result":"PASS: stage3. Enrollment record updated!"}
+POST : {"token":"dtqLuA8IIc","needle":10}
+to : http://challenge.code2040.org/api/validateneedle
+Response : {"result":"PASS: stage2. Enrollment record updated!"}
 
+Running the Third Stage of the Challenge : Prefix.
+================================================== 
 
-=======================================================
+Retrieving Challenge Data from Server : 
 
+POST : {"token":"dtqLuA8IIc"}
+to :  http://challenge.code2040.org/api/prefix
+Response : {"result":{"prefix":"127","array":["941Tg0zc","127uKcS0","127QFDyn","127bI8w5","9415PTWh","163nHOHy"]}}
 
-DatingGame.java Output :
+Array Received : ["941Tg0zc","127uKcS0","127QFDyn","127bI8w5","9415PTWh","163nHOHy"]
+Prefix Received : 127
 
-Posting {"token":"dtqLuA8IIc"} to : http://challenge.code2040.org/api/time 
-Received : {"result":{"interval":280912607,"datestamp":"2023-12-19T02:05:00.000Z"}}
- 
-Posting {"token":"dtqLuA8IIc","datestamp":"2032-11-12T09:21:47.000Z"} 
+Resulting Array :["941Tg0zc","9415PTWh","163nHOHy"]
+
+Posting Challenge Results to Server : 
+
+POST : {"token":"dtqLuA8IIc","array":["941Tg0zc","9415PTWh","163nHOHy"]}
+to :  http://challenge.code2040.org/api/validateprefix
+Response : {"result":"PASS: stage3. Enrollment record updated!"}
+
+Running the Last Stage of the Challenge : DatingGame.
+================================================================ 
+
+Retrieving Challenge Data from Server : 
+
+POST : {"token":"dtqLuA8IIc"}
+to : http://challenge.code2040.org/api/time 
+Response : {"result":{"interval":283136335,"datestamp":"2020-03-12T12:50:00.000Z"}}
+
+Datestamp Received : 2020-03-12T12:50:00.000Z
+Interval Received : 283136335
+
+Resulting Date: 2029-03-02T13:48:55.000Z
+
+Posting Challenge Results to Server : 
+
+POST : {"token":"dtqLuA8IIc","datestamp":"2029-03-02T13:48:55.000Z"}
 to : http://challenge.code2040.org/api/validatetime
-Received : {"result":"PASS: stage4. Enrollment record updated!"}
- 
-Posting {"token":"dtqLuA8IIc"} to : http://challenge.code2040.org/api/status
-Received : {"result":{"Stage 2 passed":true,"Stage 4 passed":true,"Stage 1 passed":true,"Stage 3 passed":true}}
+Response : {"result":"PASS: stage4. Enrollment record updated!"}
 
+Retrieving Grades from Server : 
 
-=======================================================
-
-
+POST : {"token":"dtqLuA8IIc"}
+to : http://challenge.code2040.org/api/status
+Response : {"result":{"Stage 2 passed":true,"Stage 4 passed":true,"Stage 1 passed":true,"Stage 3 passed":true}}

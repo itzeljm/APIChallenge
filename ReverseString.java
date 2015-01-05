@@ -35,7 +35,7 @@ public class ReverseString {
  			message.put("string", reverseString);
  			String mssg = message.toString();
 
- 			System.out.println("Posting Stage Results to Server : ");
+ 			System.out.println("Posting Challenge Results to Server : ");
  			JSONObject result = challenge.BeginChallenge.post("http://challenge.code2040.org/api/validatestring", mssg);
 
 		} catch (Exception e) {

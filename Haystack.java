@@ -50,7 +50,7 @@ public class Haystack {
 			tosend.put("needle", position);
 						
 			System.out.println("Index of Needle : " + position + "\n");
-			System.out.println("Posting Stage Results to Server : ");
+			System.out.println("Posting Challenge Results to Server : ");
 			JSONObject result  = challenge.BeginChallenge.post("http://challenge.code2040.org/api/validateneedle", tosend.toString());			
 
 		} catch (Exception e) {
