@@ -9,7 +9,7 @@ import org.joda.time.*;
 * The value for datestamp is a string, formatted as an ISO 8601 datestamp. 
 * Example { Datestamp : 2000-11-19T05:10:00.000Z }.
 * The value for interval is a number of seconds.
-* This class adds the interval to the date, then return the resulting date to the API. 
+* This class adds the interval to the date, then returns the resulting date to the API. 
 * It also checks the grades for the API Challenge. 
 * 
 * @author Itzel Martinez
