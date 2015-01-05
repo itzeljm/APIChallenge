@@ -22,7 +22,7 @@ Compile the last stage of the challenge and the RunAll file by using the followi
 
 	javac -cp .:java-json.jar:joda-time-2.5.jar -d . <FileName>.java 
 
-Note: Can also compile all the files by using the statement for the last stage,
+Note: Can also compile all the files by using the statement for the last stage.
 
 
 Step 2 : Running Individual Files
