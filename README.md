@@ -5,10 +5,10 @@ Author : Itzel Martinez
 Instructions on How to Run the Code the API Challenge 
 ===================================================================
 
-STAGE I: ReverseString
-STAGE II: Haystack
-STAGE III: Prefix
-STAGE IV: DatingGame
+STAGE I: ReverseString 
+STAGE II: Haystack 
+STAGE III: Prefix 
+STAGE IV: DatingGame 
 
 Step 1 : Compiling
 ======
