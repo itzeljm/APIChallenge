@@ -2,7 +2,7 @@ File for the code2040 API CHALLENGE
 ===================================
 Author : Itzel Martinez
 
-Instructions on How to Run the Code for Each Stage of the Challenge 
+Instructions on How to Run the Code the API Challenge 
 ===================================================================
 
 STAGE I: ReverseString
