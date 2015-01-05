@@ -109,6 +109,8 @@ public class BeginChallenge {
 			String tosend = identifier();
 			JSONObject grades = post("http://challenge.code2040.org/api/status", tosend);
 
+			System.out.println("Grades Received : " + grades.toString());	
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
