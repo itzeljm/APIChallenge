@@ -32,6 +32,8 @@ public class BeginChallenge {
 			String token = post(REQUEST, SENDING).getString("result");
 			System.out.println("Token Received :" + token + "\n");
 
+			checkStatus();
+
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -109,7 +111,7 @@ public class BeginChallenge {
 			String tosend = identifier();
 			JSONObject grades = post("http://challenge.code2040.org/api/status", tosend);
 
-			System.out.println("Grades Received : " + grades.toString());	
+			System.out.println("Grades Received : " + grades.get("result"));	
 
 		} catch (Exception e) {
 			e.printStackTrace();
