@@ -20,21 +20,32 @@ public class DatingGame {
 	
 	/** Main method that runs the file taking in arguments ARGS. */
 	public static void main(String[] args) throws Exception {
-		
+		System.out.println("Running the Last Stage of the Challenge : DatingGame.");		
+		System.out.println("================================================================ \n");
+
 		try {
 			String id = challenge.BeginChallenge.identifier();
 
+			System.out.println("Retrieving Challenge Data from Server : ");	
 			JSONObject retobj = challenge.BeginChallenge.post("http://challenge.code2040.org/api/time ", id);
 			JSONObject pot = retobj.getJSONObject("result");
 
-			DateTime data = DateTime.parse(pot.getString("datestamp"));
+			String datestamp = pot.getString("datestamp");
+			DateTime data = DateTime.parse(datestamp);
 			int seconds = pot.getInt("interval");
+
+			System.out.println("Datestamp Received : " + datestamp);
+			System.out.println("Interval Received : " + seconds + "\n");
+
+
 			data = data.plusSeconds(seconds);
 
 			JSONObject tosend = new JSONObject();
 			tosend.put("token", challenge.BeginChallenge.token());
 			tosend.put("datestamp", data.toString());
 
+			System.out.println("Resulting Date: " + data.toString() + "\n");
+			System.out.println("Posting Stage Results to Server : ");
 			JSONObject res = challenge.BeginChallenge.post("http://challenge.code2040.org/api/validatetime", tosend.toString());
 		
 			challenge.BeginChallenge.checkStatus();

@@ -19,6 +19,8 @@ public class BeginChallenge {
 		
 		try {
 
+			System.out.println("Connecting to the Registration Endpoint.");
+			System.out.println("======================================== \n");
 			JSONObject dictionary = new JSONObject();
 			dictionary.put("email", "j_itzel_m@berkeley.edu");
 			dictionary.put("github", "https://github.com/itzeljm/APIChallenge.git");
@@ -26,7 +28,9 @@ public class BeginChallenge {
 			String SENDING = dictionary.toString();
 			String REQUEST = "http://challenge.code2040.org/api/register";
 
+			System.out.println("Retrieving Registration Data from Server : ");	
 			String token = post(REQUEST, SENDING).getString("result");
+			System.out.println("Token Received :" + token + "\n");
 
 
 		} catch (Exception e) {
@@ -64,10 +68,10 @@ public class BeginChallenge {
 	public static JSONObject post(String location, String urlParameters) throws Exception {
 		
 		HttpURLConnection connection = null;
-		System.out.println("Posting " + urlParameters + " to : " + location);
+		System.out.println("\nPOST : " + urlParameters); 
+		System.out.println("to : " + location);
 
 		try {
-
 			URL absoluteUrl  = new URL(location);
 			connection = (HttpURLConnection) absoluteUrl.openConnection();
 			connection.setRequestMethod("POST");
@@ -83,8 +87,7 @@ public class BeginChallenge {
 			in.close();
 			String received = retmssg.toString();
 
-			System.out.println("Received : " + received);	
-			System.out.println(" ");
+			System.out.println("Response : " + received + "\n");	
 
 			return retmssg;
 
@@ -102,6 +105,7 @@ public class BeginChallenge {
 	/** Method that checks grades on the API Challenge, it doesn't take any parameters. */
 	public static void checkStatus() {
 		try {
+			System.out.println("Retrieving Grades from Server : ");	
 			String tosend = identifier();
 			JSONObject grades = post("http://challenge.code2040.org/api/status", tosend);
 

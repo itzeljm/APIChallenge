@@ -1,7 +1,7 @@
 API OUTPUT 
 
 /** File that shows the messages received from the API for the registration and the 
-* different challenges.
+* different stages of the challenge.
 * @author Itzel Martinez 
 */
 
