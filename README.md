@@ -1,6 +1,5 @@
-File for the code2040 APIChallenge
-
-============
+File for the code2040 API CHALLENGE
+===================================
 Author : Itzel Martinez
 
 Instructions on How to Run the Code for Each Challenge 
