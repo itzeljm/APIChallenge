@@ -1,4 +1,4 @@
-File for the code2040 API CHALLENGE
+File for the code2040 API Challenge
 ===================================
 Author : Itzel Martinez
 
