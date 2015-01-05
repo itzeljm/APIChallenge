@@ -1,6 +1,3 @@
-File for the code2040 APIChallenge
-
-============
 Author : Itzel Martinez
 
 CODE2040 API CHALLENGE REFLECTION 
