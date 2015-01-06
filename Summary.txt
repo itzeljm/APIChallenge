@@ -7,10 +7,10 @@ As I began this challenge I was a little afraid that I would not be able
 to complete it due to my lack of experience with API's.
 I am fairly new to the world of Computer Science as it was not until 
 my freshman year of college that I learned about this field. But it was 
-also during my first year of college that I learned I had a passion for Computer Science
+also during my first year of college that I learned I had a passion for Computer Science.
 I worked my hardest to complete this challenge and it has been a very rewarding experience.
-
-This challenge has not taught me about how connecting and 
+ 
+This challenge has not only taught me how connecting and 
 retrieving information from an API works but it has also taught me about myself,  
 and the way in which I go about completing a project. 
 This is the first project that I have started from scratch. Most of the projects I have worked
@@ -18,19 +18,19 @@ on have exisiting files that I could work off and so most classes and methods ha
 organized. I mention this because working on this challenge has been very helpful in determining
 my style of organizing a project, classes and figuring out which methods I feel are important to my project.
 I had also never worked with an API before, I honestly didn't really know what an API was and so 
-that is how I began this challenge, the first step was to learn whan an API was. 
+that is how I began this challenge, by learning what an API was. 
 Personally, this challenge was difficult and lengthy but it was a very valuable experience. 
 
 The following are just some of the lessons that I learned throughout the challenge. 
 I learned that it is not easy to learn things on your own but is often the best way to learn.
 Another thing that I learned is how important attention to detail is. I say this because 
-a small detail that I bypassed for phase 0 of the challenge, the registration portion held me back.
-I spent hours trying to figure out why my registration wasn't going through to the server. 
-The cause of my error turned out to be a very small but a very important part of the registration.
-My mistake was that I put the string "Email" inside my JSON dictionary instead of "email", which
-was the correct string to include, and "Github" instead of "github", and because of this small
-mistake I spent hours trying to register my code to the API. I know this is very silly of me
-and it was frustrating too, but because of this mistake I have now learned a very very
+a small detail that I bypassed for phase 0 of the challenge, the registration portion held me back from
+starting the challenge for some time. I spent hours trying to figure out why my registration wasn't 
+going through to the server. I later found out that the cause of my error turned out to be a very small 
+but a very important part of the registration. My mistake was that I had put the string "Email" inside my 
+JSON dictionary instead of "email", which was the correct string to include, and "Github" instead 
+of "github", and because of this small mistake I spent hours trying to register my code to the API. 
+I know this is very silly of me and it was frustrating too, but because of this mistake I have now learned a very very
 valuable lesson. The lesson is that whenever you are working on a project make
 sure that you follow the spec word by word, literally, and that attention to detail is of critical importance. 
 
